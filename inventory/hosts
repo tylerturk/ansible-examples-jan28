@@ -1,0 +1,5 @@
+[corp-test]
+localhost
+
+[corporate:children]
+corp-test
