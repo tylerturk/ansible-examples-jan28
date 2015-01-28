@@ -1,2 +1,4 @@
 ---
 # vars file for common
+
+defaults_vars_variable: 1

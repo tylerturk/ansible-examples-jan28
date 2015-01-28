@@ -11,3 +11,16 @@
 
 - name: Show how default values work
   template: src=index.jn2 dest={{ ansible_env.PWD }}/output/index.html
+
+- name: Showing the most closely related group_var wins
+  debug: var=child_group_beats_all
+
+- name: Showing that vars/ overrides defaults/
+  debug: var=defaults_vars_variable
+
+- name: Including vars when corporate
+  include_vars: corporate.yml
+  when: "'corporate' in group_names"
+
+- name: Show that included variables beat group_vars
+  debug: var=included_var

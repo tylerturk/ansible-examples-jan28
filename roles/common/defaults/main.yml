@@ -1,4 +1,4 @@
 ---
 # defaults file for common
 
-example_variable: 0
+defaults_vars_variable: 0

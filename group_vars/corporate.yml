@@ -1,0 +1,2 @@
+child_group_beats_all: True
+included_var: "I'm from the group vars file 'corporate.yml'"
