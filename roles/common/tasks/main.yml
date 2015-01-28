@@ -1,0 +1,13 @@
+---
+# tasks file for common
+- name: Ensure output directory
+  file: state=directory path={{ ansible_env.PWD }}/output/
+
+- name: Generate hosts file
+  template: src=hosts.jn2 dest={{ ansible_env.PWD }}/output/hosts
+
+- name: Generate group file
+  template: src=groups.jn2 dest={{ ansible_env.PWD }}/output/groups
+
+- name: Show how default values work
+  template: src=index.jn2 dest={{ ansible_env.PWD }}/output/index.html
